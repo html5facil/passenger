@@ -1,15 +1,15 @@
 <?php
 
-namespace Laravel\Passport\Guards;
+namespace Masdevs\Passanger\Guards;
 
 use Exception;
 use Firebase\JWT\JWT;
-use Laravel\Passport\Token;
+use Masdevs\Passanger\Token;
 use Illuminate\Http\Request;
-use Laravel\Passport\TransientToken;
+use Masdevs\Passanger\TransientToken;
 use Illuminate\Container\Container;
-use Laravel\Passport\TokenRepository;
-use Laravel\Passport\ClientRepository;
+use Masdevs\Passanger\TokenRepository;
+use Masdevs\Passanger\ClientRepository;
 use League\OAuth2\Server\ResourceServer;
 use Illuminate\Contracts\Auth\UserProvider;
 use Illuminate\Contracts\Encryption\Encrypter;

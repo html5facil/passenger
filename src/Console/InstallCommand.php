@@ -1,6 +1,6 @@
 <?php
 
-namespace Laravel\Passport\Console;
+namespace Masdevs\Passanger\Console;
 
 use Illuminate\Console\Command;
 

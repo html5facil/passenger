@@ -1,6 +1,6 @@
 <?php
 
-namespace Laravel\Passport;
+namespace Masdevs\Passanger;
 
 use DateInterval;
 use Carbon\Carbon;
@@ -73,7 +73,7 @@ class Passport
         };
 
         $options = array_merge($options, [
-            'namespace' => '\Laravel\Passport\Http\Controllers',
+            'namespace' => '\Masdevs\Passanger\Http\Controllers',
         ]);
 
         Route::group($options, function ($router) use ($callback) {

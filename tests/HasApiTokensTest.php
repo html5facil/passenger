@@ -24,7 +24,7 @@ class HasApiTokensTest extends PHPUnit_Framework_TestCase
     {
         $container = new Container;
         Container::setInstance($container);
-        $container->instance(Laravel\Passport\PersonalAccessTokenFactory::class, $factory = Mockery::mock());
+        $container->instance(Masdevs\Passanger\PersonalAccessTokenFactory::class, $factory = Mockery::mock());
         $factory->shouldReceive('make')->once()->with(1, 'name', ['scopes']);
         $user = new HasApiTokensTestStub;
 
@@ -34,7 +34,7 @@ class HasApiTokensTest extends PHPUnit_Framework_TestCase
 
 class HasApiTokensTestStub
 {
-    use Laravel\Passport\HasApiTokens;
+    use Masdevs\Passanger\HasApiTokens;
 
     public function getKey()
     {

@@ -1,6 +1,6 @@
 <?php
 
-namespace Laravel\Passport\Console;
+namespace Masdevs\Passanger\Console;
 
 use Illuminate\Console\Command;
 use Illuminate\Support\Facades\Storage;
@@ -12,7 +12,7 @@ class DataTypeCommandId extends Command
      *
      * @var string
      */
-    protected $signature = 'passport:data-type-id';
+    protected $signature = 'Passanger:data-type-id';
 
     /**
      * The console command description.

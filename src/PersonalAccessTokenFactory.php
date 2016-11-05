@@ -1,6 +1,6 @@
 <?php
 
-namespace Laravel\Passport;
+namespace Masdevs\Passanger;
 
 use Zend\Diactoros\Response;
 use Zend\Diactoros\ServerRequest;

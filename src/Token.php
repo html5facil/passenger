@@ -1,6 +1,6 @@
 <?php
 
-namespace Laravel\Passport;
+namespace Masdevs\Passanger;
 
 use Alsofronie\Uuid\Uuid32ModelTrait;
 use Illuminate\Database\Eloquent\Model;

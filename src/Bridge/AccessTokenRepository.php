@@ -1,10 +1,12 @@
 <?php
-namespace Laravel\Passport\Bridge;
+namespace Masdevs\Passanger\Bridge;
+
 use DateTime;
 use Illuminate\Database\Connection;
 use League\OAuth2\Server\Entities\ClientEntityInterface;
 use League\OAuth2\Server\Entities\AccessTokenEntityInterface;
 use League\OAuth2\Server\Repositories\AccessTokenRepositoryInterface;
+
 class AccessTokenRepository implements AccessTokenRepositoryInterface
 {
     use FormatsScopesForStorage;

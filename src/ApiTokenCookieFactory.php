@@ -1,6 +1,6 @@
 <?php
 
-namespace Laravel\Passport;
+namespace Masdevs\Passanger;
 
 use Carbon\Carbon;
 use Firebase\JWT\JWT;

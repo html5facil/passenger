@@ -1,6 +1,6 @@
 <?php
 
-use Laravel\Passport\Http\Middleware\CheckForAnyScope as CheckScopes;
+use Masdevs\Passanger\Http\Middleware\CheckForAnyScope as CheckScopes;
 
 class CheckForAnyScopesTest extends PHPUnit_Framework_TestCase
 {

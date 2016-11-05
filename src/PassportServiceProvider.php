@@ -1,22 +1,22 @@
 <?php
 
-namespace Laravel\Passport;
+namespace Masdevs\Passanger;
 
 use DateInterval;
 use Illuminate\Auth\RequestGuard;
 use Illuminate\Support\Facades\Auth;
-use Laravel\Passport\Guards\TokenGuard;
+use Masdevs\Passanger\Guards\TokenGuard;
 use Illuminate\Support\ServiceProvider;
 use League\OAuth2\Server\ResourceServer;
 use League\OAuth2\Server\AuthorizationServer;
 use League\OAuth2\Server\Grant\AuthCodeGrant;
 use League\OAuth2\Server\Grant\PasswordGrant;
-use Laravel\Passport\Bridge\PersonalAccessGrant;
+use Masdevs\Passanger\Bridge\PersonalAccessGrant;
 use League\OAuth2\Server\Grant\RefreshTokenGrant;
-use Laravel\Passport\Bridge\RefreshTokenRepository;
+use Masdevs\Passanger\Bridge\RefreshTokenRepository;
 use League\OAuth2\Server\Grant\ClientCredentialsGrant;
 
-class PassportServiceProvider extends ServiceProvider
+class PassangerServiceProvider extends ServiceProvider
 {
     /**
      * Bootstrap the application services.
@@ -25,18 +25,18 @@ class PassportServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        $this->loadViewsFrom(__DIR__.'/../resources/views', 'passport');
+        $this->loadViewsFrom(__DIR__.'/../resources/views', 'Passanger');
 
         if ($this->app->runningInConsole()) {
             $this->registerMigrations();
 
             $this->publishes([
-                __DIR__.'/../resources/views' => base_path('resources/views/vendor/passport'),
-            ], 'passport-views');
+                __DIR__.'/../resources/views' => base_path('resources/views/vendor/Passanger'),
+            ], 'Passanger-views');
 
             $this->publishes([
-                __DIR__.'/../resources/assets/js/components' => base_path('resources/assets/js/components/passport'),
-            ], 'passport-components');
+                __DIR__.'/../resources/assets/js/components' => base_path('resources/assets/js/components/Passanger'),
+            ], 'Passanger-components');
 
             $this->commands([
                 Console\DataTypeCommandId::class,
@@ -48,19 +48,19 @@ class PassportServiceProvider extends ServiceProvider
     }
 
     /**
-     * Register Passport's migration files.
+     * Register Passanger's migration files.
      *
      * @return void
      */
     protected function registerMigrations()
     {
-        if (Passport::$runsMigrations) {
+        if (Passanger::$runsMigrations) {
             return $this->loadMigrationsFrom(__DIR__.'/../database/migrations');
         }
 
         $this->publishes([
             __DIR__.'/../database/migrations' => database_path('migrations'),
-        ], 'passport-migrations');
+        ], 'Passanger-migrations');
     }
 
     /**
@@ -87,15 +87,15 @@ class PassportServiceProvider extends ServiceProvider
         $this->app->singleton(AuthorizationServer::class, function () {
             return tap($this->makeAuthorizationServer(), function ($server) {
                 $server->enableGrantType(
-                    $this->makeAuthCodeGrant(), Passport::tokensExpireIn()
+                    $this->makeAuthCodeGrant(), Passanger::tokensExpireIn()
                 );
 
                 $server->enableGrantType(
-                    $this->makeRefreshTokenGrant(), Passport::tokensExpireIn()
+                    $this->makeRefreshTokenGrant(), Passanger::tokensExpireIn()
                 );
 
                 $server->enableGrantType(
-                    $this->makePasswordGrant(), Passport::tokensExpireIn()
+                    $this->makePasswordGrant(), Passanger::tokensExpireIn()
                 );
 
                 $server->enableGrantType(
@@ -103,7 +103,7 @@ class PassportServiceProvider extends ServiceProvider
                 );
 
                 $server->enableGrantType(
-                    new ClientCredentialsGrant, Passport::tokensExpireIn()
+                    new ClientCredentialsGrant, Passanger::tokensExpireIn()
                 );
             });
         });
@@ -117,7 +117,7 @@ class PassportServiceProvider extends ServiceProvider
     protected function makeAuthCodeGrant()
     {
         return tap($this->buildAuthCodeGrant(), function ($grant) {
-            $grant->setRefreshTokenTTL(Passport::refreshTokensExpireIn());
+            $grant->setRefreshTokenTTL(Passanger::refreshTokensExpireIn());
         });
     }
 
@@ -145,7 +145,7 @@ class PassportServiceProvider extends ServiceProvider
         $repository = $this->app->make(RefreshTokenRepository::class);
 
         return tap(new RefreshTokenGrant($repository), function ($grant) {
-            $grant->setRefreshTokenTTL(Passport::refreshTokensExpireIn());
+            $grant->setRefreshTokenTTL(Passanger::refreshTokensExpireIn());
         });
     }
 
@@ -161,7 +161,7 @@ class PassportServiceProvider extends ServiceProvider
             $this->app->make(Bridge\RefreshTokenRepository::class)
         );
 
-        $grant->setRefreshTokenTTL(Passport::refreshTokensExpireIn());
+        $grant->setRefreshTokenTTL(Passanger::refreshTokensExpireIn());
 
         return $grant;
     }
@@ -177,8 +177,8 @@ class PassportServiceProvider extends ServiceProvider
             $this->app->make(Bridge\ClientRepository::class),
             $this->app->make(Bridge\AccessTokenRepository::class),
             $this->app->make(Bridge\ScopeRepository::class),
-            'file://'.Passport::keyPath('oauth-private.key'),
-            'file://'.Passport::keyPath('oauth-public.key')
+            'file://'.Passanger::keyPath('oauth-private.key'),
+            'file://'.Passanger::keyPath('oauth-public.key')
         );
     }
 
@@ -192,7 +192,7 @@ class PassportServiceProvider extends ServiceProvider
         $this->app->singleton(ResourceServer::class, function () {
             return new ResourceServer(
                 $this->app->make(Bridge\AccessTokenRepository::class),
-                'file://'.Passport::keyPath('oauth-public.key')
+                'file://'.Passanger::keyPath('oauth-public.key')
             );
         });
     }
@@ -204,7 +204,7 @@ class PassportServiceProvider extends ServiceProvider
      */
     protected function registerGuard()
     {
-        Auth::extend('passport', function ($app, $name, array $config) {
+        Auth::extend('Passanger', function ($app, $name, array $config) {
             return tap($this->makeGuard($config), function ($guard) {
                 $this->app->refresh('request', $guard, 'setRequest');
             });

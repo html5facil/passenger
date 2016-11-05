@@ -1,6 +1,6 @@
 <?php
 
-namespace Laravel\Passport;
+namespace Masdevs\Passanger;
 
 use Illuminate\Contracts\Routing\Registrar as Router;
 

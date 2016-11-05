@@ -1,9 +1,9 @@
 <?php
 
-use Laravel\Passport\Passport;
-use Laravel\Passport\Bridge\Scope;
-use Laravel\Passport\Bridge\Client;
-use Laravel\Passport\Bridge\ScopeRepository;
+use Masdevs\Passanger\Passport;
+use Masdevs\Passanger\Bridge\Scope;
+use Masdevs\Passanger\Bridge\Client;
+use Masdevs\Passanger\Bridge\ScopeRepository;
 
 class BridgeScopeRepositoryTest extends PHPUnit_Framework_TestCase
 {

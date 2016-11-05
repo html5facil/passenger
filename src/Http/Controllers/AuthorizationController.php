@@ -1,10 +1,10 @@
 <?php
 
-namespace Laravel\Passport\Http\Controllers;
+namespace Masdevs\Passanger\Http\Controllers;
 
-use Laravel\Passport\Passport;
+use Masdevs\Passanger\Passport;
 use Illuminate\Http\Request;
-use Laravel\Passport\ClientRepository;
+use Masdevs\Passanger\ClientRepository;
 use Psr\Http\Message\ServerRequestInterface;
 use League\OAuth2\Server\AuthorizationServer;
 use Illuminate\Contracts\Routing\ResponseFactory;

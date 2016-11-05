@@ -3,7 +3,7 @@
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
-use Laravel\Passport\DataTypeIdSelector;
+use Masdevs\Passanger\DataTypeIdSelector;
 
 class CreateOauthClientsTable extends Migration
 {

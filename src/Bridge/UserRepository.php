@@ -1,6 +1,6 @@
 <?php
 
-namespace Laravel\Passport\Bridge;
+namespace Masdevs\Passanger\Bridge;
 
 use RuntimeException;
 use Illuminate\Contracts\Hashing\Hasher;
