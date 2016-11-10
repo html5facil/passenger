@@ -1,13 +1,9 @@
 {
     "name": "masdevs/passenger",
-    "description": "Laravel Passport provides OAuth2 server support to Laravel. This is a fork that implement support to Uuid in all models for Oauth by Más Devs community.",
-    "keywords": ["laravel", "passenger", "oauth", "uuid"],
+    "description": "Is a fork of Laravel Passport but with support to UUID.",
+    "keywords": ["masdevs", "passenger", "oauth", "uuid"],
     "license": "MIT",
     "authors": [
-        {
-            "name": "Taylor Otwell",
-            "email": "taylor@laravel.com"
-        },
         {
             "name": "Luis Antonio Gomez",
             "email": "jimmylagp@gmail.com"
