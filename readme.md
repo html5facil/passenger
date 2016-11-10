@@ -1,10 +1,12 @@
 # Passenger
 
-[![Build Status](https://api.travis-ci.org/html5facil/passenger.svg?branch=master)](https://travis-ci.org/html5facil/passenger.svg?branch=master)
-[![Total Downloads](https://poser.pugx.org/html5facil/passenger/d/total.svg)](https://packagist.org/packages/laravel/passenger)
-[![Latest Stable Version](https://poser.pugx.org/html5facil/passenger/v/stable.svg)](https://packagist.org/packages/laravel/passenger)
-[![Latest Unstable Version](https://poser.pugx.org/html5facil/passenger/v/unstable.svg)](https://packagist.org/html5facil/passenger/passport)
-[![License](https://poser.pugx.org/html5facil/passenger/license.svg)](https://packagist.org/packages/html5facil/passenger)
+[![Build Status](https://api.travis-ci.org/html5facil/passenger.svg?branch=1.0)](https://api.travis-ci.org/html5facil/passenger.svg?branch=1.0)
+[![Total Downloads](https://poser.pugx.org/masdevs/passenger/downloads)](https://packagist.org/packages/masdevs/passenger)
+[![Latest Stable Version](https://poser.pugx.org/masdevs/passenger/v/stable)](https://packagist.org/packages/masdevs/passenger)
+[![Latest Unstable Version](https://poser.pugx.org/masdevs/passenger/v/unstable)](https://packagist.org/packages/masdevs/passenger)
+[![License](https://poser.pugx.org/masdevs/passenger/license)](https://packagist.org/packages/masdevs/passenger)
+
+
 
 ## Introduction
 
