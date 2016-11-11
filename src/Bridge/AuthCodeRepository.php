@@ -1,6 +1,6 @@
 <?php
 
-namespace Masdevs\Passanger\Bridge;
+namespace Masdevs\Passenger\Bridge;
 
 use Illuminate\Database\Connection;
 use League\OAuth2\Server\Entities\AuthCodeEntityInterface;

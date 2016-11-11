@@ -1,15 +1,15 @@
 <?php
 
-namespace Masdevs\Passanger\Guards;
+namespace Masdevs\Passenger\Guards;
 
 use Exception;
 use Firebase\JWT\JWT;
-use Masdevs\Passanger\Token;
+use Masdevs\Passenger\Token;
 use Illuminate\Http\Request;
-use Masdevs\Passanger\TransientToken;
+use Masdevs\Passenger\TransientToken;
 use Illuminate\Container\Container;
-use Masdevs\Passanger\TokenRepository;
-use Masdevs\Passanger\ClientRepository;
+use Masdevs\Passenger\TokenRepository;
+use Masdevs\Passenger\ClientRepository;
 use League\OAuth2\Server\ResourceServer;
 use Illuminate\Contracts\Auth\UserProvider;
 use Illuminate\Contracts\Encryption\Encrypter;

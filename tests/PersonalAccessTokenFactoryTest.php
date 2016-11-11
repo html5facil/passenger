@@ -10,11 +10,11 @@ class PersonalAccessTokenFactoryTest extends PHPUnit_Framework_TestCase
     public function test_access_token_can_be_created()
     {
         $server = Mockery::mock('League\OAuth2\Server\AuthorizationServer');
-        $clients = Mockery::mock('Masdevs\Passanger\ClientRepository');
-        $tokens = Mockery::mock('Masdevs\Passanger\TokenRepository');
+        $clients = Mockery::mock('Masdevs\Passenger\ClientRepository');
+        $tokens = Mockery::mock('Masdevs\Passenger\TokenRepository');
         $jwt = Mockery::mock('Lcobucci\JWT\Parser');
 
-        $factory = new Masdevs\Passanger\PersonalAccessTokenFactory($server, $clients, $tokens, $jwt);
+        $factory = new Masdevs\Passenger\PersonalAccessTokenFactory($server, $clients, $tokens, $jwt);
 
         $clients->shouldReceive('personalAccessClient')->andReturn($client = new PersonalAccessTokenFactoryTestClientStub);
         $server->shouldReceive('respondToAccessTokenRequest')->andReturn($response = Mockery::mock());
@@ -29,7 +29,7 @@ class PersonalAccessTokenFactoryTest extends PHPUnit_Framework_TestCase
 
         $result = $factory->make(1, 'token', ['scopes']);
 
-        $this->assertInstanceOf('Masdevs\Passanger\PersonalAccessTokenResult', $result);
+        $this->assertInstanceOf('Masdevs\Passenger\PersonalAccessTokenResult', $result);
     }
 }
 
@@ -39,7 +39,7 @@ class PersonalAccessTokenFactoryTestClientStub
     public $secret = 'something';
 }
 
-class PersonalAccessTokenFactoryTestModelStub extends Masdevs\Passanger\Token
+class PersonalAccessTokenFactoryTestModelStub extends Masdevs\Passenger\Token
 {
     public $id = 1;
     public $secret = 'something';

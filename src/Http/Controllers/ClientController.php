@@ -1,11 +1,11 @@
 <?php
 
-namespace Masdevs\Passanger\Http\Controllers;
+namespace Masdevs\Passenger\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
-use Masdevs\Passanger\Client;
-use Masdevs\Passanger\ClientRepository;
+use Masdevs\Passenger\Client;
+use Masdevs\Passenger\ClientRepository;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Contracts\Validation\Factory as ValidationFactory;
 

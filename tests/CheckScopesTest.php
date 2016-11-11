@@ -1,6 +1,6 @@
 <?php
 
-use Masdevs\Passanger\Http\Middleware\CheckScopes;
+use Masdevs\Passenger\Http\Middleware\CheckScopes;
 
 class CheckScopesTest extends PHPUnit_Framework_TestCase
 {

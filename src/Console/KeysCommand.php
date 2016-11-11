@@ -1,9 +1,9 @@
 <?php
 
-namespace Masdevs\Passanger\Console;
+namespace Masdevs\Passenger\Console;
 
 use phpseclib\Crypt\RSA;
-use Masdevs\Passanger\Passport;
+use Masdevs\Passenger\Passport;
 use Illuminate\Console\Command;
 
 class KeysCommand extends Command

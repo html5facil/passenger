@@ -1,8 +1,8 @@
 <?php
 
-namespace Masdevs\Passanger\Bridge;
+namespace Masdevs\Passenger\Bridge;
 
-use Masdevs\Passanger\Passport;
+use Masdevs\Passenger\Passport;
 use League\OAuth2\Server\Entities\ClientEntityInterface;
 use League\OAuth2\Server\Repositories\ScopeRepositoryInterface;
 

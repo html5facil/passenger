@@ -1,6 +1,6 @@
 <?php
 
-namespace Masdevs\Passanger\Console;
+namespace Masdevs\Passenger\Console;
 
 use Illuminate\Console\Command;
 use Illuminate\Support\Facades\Storage;

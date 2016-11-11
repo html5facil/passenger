@@ -1,10 +1,10 @@
 <?php
 
-namespace Masdevs\Passanger\Http\Controllers;
+namespace Masdevs\Passenger\Http\Controllers;
 
-use Masdevs\Passanger\Passport;
+use Masdevs\Passenger\Passport;
 use Illuminate\Http\Request;
-use Masdevs\Passanger\ClientRepository;
+use Masdevs\Passenger\ClientRepository;
 use Psr\Http\Message\ServerRequestInterface;
 use League\OAuth2\Server\AuthorizationServer;
 use Illuminate\Contracts\Routing\ResponseFactory;

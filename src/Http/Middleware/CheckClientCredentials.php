@@ -1,6 +1,6 @@
 <?php
 
-namespace Masdevs\Passanger\Http\Middleware;
+namespace Masdevs\Passenger\Http\Middleware;
 
 use Closure;
 use League\OAuth2\Server\ResourceServer;

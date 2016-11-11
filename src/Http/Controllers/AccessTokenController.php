@@ -1,9 +1,9 @@
 <?php
 
-namespace Masdevs\Passanger\Http\Controllers;
+namespace Masdevs\Passenger\Http\Controllers;
 
-use Masdevs\Passanger\Passport;
-use Masdevs\Passanger\TokenRepository;
+use Masdevs\Passenger\Passport;
+use Masdevs\Passenger\TokenRepository;
 use Lcobucci\JWT\Parser as JwtParser;
 use Zend\Diactoros\Response as Psr7Response;
 use Psr\Http\Message\ServerRequestInterface;

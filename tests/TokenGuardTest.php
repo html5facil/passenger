@@ -4,7 +4,7 @@ use Carbon\Carbon;
 use Firebase\JWT\JWT;
 use Illuminate\Http\Request;
 use Illuminate\Container\Container;
-use Masdevs\Passanger\Guards\TokenGuard;
+use Masdevs\Passenger\Guards\TokenGuard;
 
 class TokenGuardTest extends PHPUnit_Framework_TestCase
 {
@@ -17,8 +17,8 @@ class TokenGuardTest extends PHPUnit_Framework_TestCase
     {
         $resourceServer = Mockery::mock('League\OAuth2\Server\ResourceServer');
         $userProvider = Mockery::mock('Illuminate\Contracts\Auth\UserProvider');
-        $tokens = Mockery::mock('Masdevs\Passanger\TokenRepository');
-        $clients = Mockery::mock('Masdevs\Passanger\ClientRepository');
+        $tokens = Mockery::mock('Masdevs\Passenger\TokenRepository');
+        $clients = Mockery::mock('Masdevs\Passenger\ClientRepository');
         $encrypter = Mockery::mock('Illuminate\Contracts\Encryption\Encrypter');
 
         $guard = new TokenGuard($resourceServer, $userProvider, $tokens, $clients, $encrypter);
@@ -49,8 +49,8 @@ class TokenGuardTest extends PHPUnit_Framework_TestCase
 
         $resourceServer = Mockery::mock('League\OAuth2\Server\ResourceServer');
         $userProvider = Mockery::mock('Illuminate\Contracts\Auth\UserProvider');
-        $tokens = Mockery::mock('Masdevs\Passanger\TokenRepository');
-        $clients = Mockery::mock('Masdevs\Passanger\ClientRepository');
+        $tokens = Mockery::mock('Masdevs\Passenger\TokenRepository');
+        $clients = Mockery::mock('Masdevs\Passenger\ClientRepository');
         $encrypter = Mockery::mock('Illuminate\Contracts\Encryption\Encrypter');
 
         $guard = new TokenGuard($resourceServer, $userProvider, $tokens, $clients, $encrypter);
@@ -69,8 +69,8 @@ class TokenGuardTest extends PHPUnit_Framework_TestCase
     {
         $resourceServer = Mockery::mock('League\OAuth2\Server\ResourceServer');
         $userProvider = Mockery::mock('Illuminate\Contracts\Auth\UserProvider');
-        $tokens = Mockery::mock('Masdevs\Passanger\TokenRepository');
-        $clients = Mockery::mock('Masdevs\Passanger\ClientRepository');
+        $tokens = Mockery::mock('Masdevs\Passenger\TokenRepository');
+        $clients = Mockery::mock('Masdevs\Passenger\ClientRepository');
         $encrypter = Mockery::mock('Illuminate\Contracts\Encryption\Encrypter');
 
         $guard = new TokenGuard($resourceServer, $userProvider, $tokens, $clients, $encrypter);
@@ -89,8 +89,8 @@ class TokenGuardTest extends PHPUnit_Framework_TestCase
     {
         $resourceServer = Mockery::mock('League\OAuth2\Server\ResourceServer');
         $userProvider = Mockery::mock('Illuminate\Contracts\Auth\UserProvider');
-        $tokens = Mockery::mock('Masdevs\Passanger\TokenRepository');
-        $clients = Mockery::mock('Masdevs\Passanger\ClientRepository');
+        $tokens = Mockery::mock('Masdevs\Passenger\TokenRepository');
+        $clients = Mockery::mock('Masdevs\Passenger\ClientRepository');
         $encrypter = new Illuminate\Encryption\Encrypter(str_repeat('a', 16));
 
         $guard = new TokenGuard($resourceServer, $userProvider, $tokens, $clients, $encrypter);
@@ -115,8 +115,8 @@ class TokenGuardTest extends PHPUnit_Framework_TestCase
     {
         $resourceServer = Mockery::mock('League\OAuth2\Server\ResourceServer');
         $userProvider = Mockery::mock('Illuminate\Contracts\Auth\UserProvider');
-        $tokens = Mockery::mock('Masdevs\Passanger\TokenRepository');
-        $clients = Mockery::mock('Masdevs\Passanger\ClientRepository');
+        $tokens = Mockery::mock('Masdevs\Passenger\TokenRepository');
+        $clients = Mockery::mock('Masdevs\Passenger\ClientRepository');
         $encrypter = new Illuminate\Encryption\Encrypter(str_repeat('a', 16));
 
         $guard = new TokenGuard($resourceServer, $userProvider, $tokens, $clients, $encrypter);
@@ -139,8 +139,8 @@ class TokenGuardTest extends PHPUnit_Framework_TestCase
     {
         $resourceServer = Mockery::mock('League\OAuth2\Server\ResourceServer');
         $userProvider = Mockery::mock('Illuminate\Contracts\Auth\UserProvider');
-        $tokens = Mockery::mock('Masdevs\Passanger\TokenRepository');
-        $clients = Mockery::mock('Masdevs\Passanger\ClientRepository');
+        $tokens = Mockery::mock('Masdevs\Passenger\TokenRepository');
+        $clients = Mockery::mock('Masdevs\Passenger\ClientRepository');
         $encrypter = new Illuminate\Encryption\Encrypter(str_repeat('a', 16));
 
         $guard = new TokenGuard($resourceServer, $userProvider, $tokens, $clients, $encrypter);
@@ -162,5 +162,5 @@ class TokenGuardTest extends PHPUnit_Framework_TestCase
 
 class TokenGuardTestUser
 {
-    use Masdevs\Passanger\HasApiTokens;
+    use Masdevs\Passenger\HasApiTokens;
 }

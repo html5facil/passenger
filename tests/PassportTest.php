@@ -1,6 +1,6 @@
 <?php
 
-use Masdevs\Passanger\Passport;
+use Masdevs\Passenger\Passport;
 
 class PassportTest extends PHPUnit_Framework_TestCase
 {

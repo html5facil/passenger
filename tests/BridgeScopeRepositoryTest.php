@@ -1,9 +1,9 @@
 <?php
 
-use Masdevs\Passanger\Passport;
-use Masdevs\Passanger\Bridge\Scope;
-use Masdevs\Passanger\Bridge\Client;
-use Masdevs\Passanger\Bridge\ScopeRepository;
+use Masdevs\Passenger\Passport;
+use Masdevs\Passenger\Bridge\Scope;
+use Masdevs\Passenger\Bridge\Client;
+use Masdevs\Passenger\Bridge\ScopeRepository;
 
 class BridgeScopeRepositoryTest extends PHPUnit_Framework_TestCase
 {

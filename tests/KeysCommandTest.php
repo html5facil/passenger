@@ -24,7 +24,7 @@ class KeysCommandTest extends PHPUnit_Framework_TestCase
 
     public function testPrivateAndPublicKeysAreGenerated()
     {
-        $command = Mockery::mock(Masdevs\Passanger\Console\KeysCommand::class)
+        $command = Mockery::mock(Masdevs\Passenger\Console\KeysCommand::class)
             ->makePartial()
             ->shouldReceive('info')
             ->with('Encryption keys generated successfully.')
@@ -40,9 +40,9 @@ class KeysCommandTest extends PHPUnit_Framework_TestCase
 
     public function testPrivateAndPublicKeysAreGeneratedInCustomPath()
     {
-        \Masdevs\Passanger\Passport::loadKeysFrom(custom_path());
+        \Masdevs\Passenger\Passport::loadKeysFrom(custom_path());
 
-        $command = Mockery::mock(Masdevs\Passanger\Console\KeysCommand::class)
+        $command = Mockery::mock(Masdevs\Passenger\Console\KeysCommand::class)
             ->makePartial()
             ->shouldReceive('info')
             ->with('Encryption keys generated successfully.')

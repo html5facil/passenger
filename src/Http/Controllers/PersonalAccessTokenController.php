@@ -1,11 +1,11 @@
 <?php
 
-namespace Masdevs\Passanger\Http\Controllers;
+namespace Masdevs\Passenger\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
-use Masdevs\Passanger\Passport;
-use Masdevs\Passanger\PersonalAccessTokenResult;
+use Masdevs\Passenger\Passport;
+use Masdevs\Passenger\PersonalAccessTokenResult;
 use Illuminate\Contracts\Validation\Factory as ValidationFactory;
 
 class PersonalAccessTokenController

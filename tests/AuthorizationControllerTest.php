@@ -12,14 +12,14 @@ class AuthorizationControllerTest extends PHPUnit_Framework_TestCase
 
     public function test_authorization_view_is_presented()
     {
-        Masdevs\Passanger\Passport::tokensCan([
+        Masdevs\Passenger\Passport::tokensCan([
             'scope-1' => 'description',
         ]);
 
         $server = Mockery::mock(AuthorizationServer::class);
         $response = Mockery::mock(ResponseFactory::class);
 
-        $controller = new Masdevs\Passanger\Http\Controllers\AuthorizationController($server, $response);
+        $controller = new Masdevs\Passenger\Http\Controllers\AuthorizationController($server, $response);
 
         $server->shouldReceive('validateAuthorizationRequest')->andReturn($authRequest = Mockery::mock());
 
@@ -29,7 +29,7 @@ class AuthorizationControllerTest extends PHPUnit_Framework_TestCase
         $request->shouldReceive('user')->andReturn('user');
 
         $authRequest->shouldReceive('getClient->getIdentifier')->andReturn(1);
-        $authRequest->shouldReceive('getScopes')->andReturn([new Masdevs\Passanger\Bridge\Scope('scope-1')]);
+        $authRequest->shouldReceive('getScopes')->andReturn([new Masdevs\Passenger\Bridge\Scope('scope-1')]);
 
         $response->shouldReceive('view')->once()->andReturnUsing(function ($view, $data) use ($authRequest) {
             $this->assertEquals('passport::authorize', $view);
@@ -40,7 +40,7 @@ class AuthorizationControllerTest extends PHPUnit_Framework_TestCase
             return 'view';
         });
 
-        $clients = Mockery::mock('Masdevs\Passanger\ClientRepository');
+        $clients = Mockery::mock('Masdevs\Passenger\ClientRepository');
         $clients->shouldReceive('find')->with(1)->andReturn('client');
 
         $this->assertEquals('view', $controller->authorize(
@@ -53,7 +53,7 @@ class AuthorizationControllerTest extends PHPUnit_Framework_TestCase
         $server = Mockery::mock(AuthorizationServer::class);
         $response = Mockery::mock(ResponseFactory::class);
 
-        $controller = new Masdevs\Passanger\Http\Controllers\AuthorizationController($server, $response);
+        $controller = new Masdevs\Passenger\Http\Controllers\AuthorizationController($server, $response);
 
         $server->shouldReceive('validateAuthorizationRequest')->andReturnUsing(function () {
             throw new Exception('whoops');
@@ -62,7 +62,7 @@ class AuthorizationControllerTest extends PHPUnit_Framework_TestCase
         $request = Mockery::mock('Illuminate\Http\Request');
         $request->shouldReceive('session')->andReturn($session = Mockery::mock());
 
-        $clients = Mockery::mock('Masdevs\Passanger\ClientRepository');
+        $clients = Mockery::mock('Masdevs\Passenger\ClientRepository');
 
         $this->assertEquals('whoops', $controller->authorize(
             Mockery::mock('Psr\Http\Message\ServerRequestInterface'), $request, $clients

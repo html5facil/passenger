@@ -1,6 +1,6 @@
 <?php
 
-namespace Masdevs\Passanger;
+namespace Masdevs\Passenger;
 
 use Illuminate\Contracts\Routing\Registrar as Router;
 

@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Encryption\Encrypter;
-use Masdevs\Passanger\ApiTokenCookieFactory;
+use Masdevs\Passenger\ApiTokenCookieFactory;
 
 class ApiTokenCookieFactoryTest extends PHPUnit_Framework_TestCase
 {

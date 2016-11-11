@@ -1,11 +1,11 @@
 <?php
 
-namespace Masdevs\Passanger\Http\Controllers;
+namespace Masdevs\Passenger\Http\Controllers;
 
 use Exception;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Http\Request;
-use Masdevs\Passanger\Bridge\User;
+use Masdevs\Passenger\Bridge\User;
 
 trait RetrievesAuthRequestFromSession
 {

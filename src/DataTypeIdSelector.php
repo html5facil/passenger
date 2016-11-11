@@ -1,6 +1,6 @@
 <?php
 
-namespace Masdevs\Passanger;
+namespace Masdevs\Passenger;
 
 use Illuminate\Support\Facades\Storage;
 

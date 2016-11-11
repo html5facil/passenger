@@ -1,5 +1,5 @@
 <?php
-namespace Masdevs\Passanger\Bridge;
+namespace Masdevs\Passenger\Bridge;
 
 use DateTime;
 use Illuminate\Database\Connection;

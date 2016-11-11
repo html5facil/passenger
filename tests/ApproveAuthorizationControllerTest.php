@@ -13,7 +13,7 @@ class ApproveAuthorizationControllerTest extends PHPUnit_Framework_TestCase
     {
         $server = Mockery::mock(AuthorizationServer::class);
 
-        $controller = new Masdevs\Passanger\Http\Controllers\ApproveAuthorizationController($server);
+        $controller = new Masdevs\Passenger\Http\Controllers\ApproveAuthorizationController($server);
 
         $request = Mockery::mock('Illuminate\Http\Request');
         $request->shouldReceive('session')->andReturn($session = Mockery::mock());

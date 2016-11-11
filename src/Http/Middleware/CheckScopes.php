@@ -1,6 +1,6 @@
 <?php
 
-namespace Masdevs\Passanger\Http\Middleware;
+namespace Masdevs\Passenger\Http\Middleware;
 
 use Illuminate\Auth\AuthenticationException;
 use Illuminate\Auth\Access\AuthorizationException;

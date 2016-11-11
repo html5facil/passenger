@@ -1,6 +1,6 @@
 <?php
 
-namespace Masdevs\Passanger\Bridge;
+namespace Masdevs\Passenger\Bridge;
 
 use DateInterval;
 use Psr\Http\Message\ServerRequestInterface;

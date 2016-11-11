@@ -1,8 +1,8 @@
 <?php
 
-namespace Masdevs\Passanger\Bridge;
+namespace Masdevs\Passenger\Bridge;
 
-use Masdevs\Passanger\ClientRepository as ClientModelRepository;
+use Masdevs\Passenger\ClientRepository as ClientModelRepository;
 use League\OAuth2\Server\Repositories\ClientRepositoryInterface;
 
 class ClientRepository implements ClientRepositoryInterface
@@ -10,14 +10,14 @@ class ClientRepository implements ClientRepositoryInterface
     /**
      * The client model repository.
      *
-     * @var \Masdevs\Passanger\ClientRepository
+     * @var \Masdevs\Passenger\ClientRepository
      */
     protected $clients;
 
     /**
      * Create a new repository instance.
      *
-     * @param  \Masdevs\Passanger\ClientRepository  $clients
+     * @param  \Masdevs\Passenger\ClientRepository  $clients
      * @return void
      */
     public function __construct(ClientModelRepository $clients)
@@ -58,7 +58,7 @@ class ClientRepository implements ClientRepositoryInterface
     /**
      * Determine if the given client can handle the given grant type.
      *
-     * @param  \Masdevs\Passanger\Client  $record
+     * @param  \Masdevs\Passenger\Client  $record
      * @param  string  $grantType
      * @return bool
      */

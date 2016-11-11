@@ -1,10 +1,10 @@
 <?php
 
-namespace Masdevs\Passanger\Http\Middleware;
+namespace Masdevs\Passenger\Http\Middleware;
 
 use Closure;
 use Illuminate\Http\Response;
-use Masdevs\Passanger\ApiTokenCookieFactory;
+use Masdevs\Passenger\ApiTokenCookieFactory;
 
 class CreateFreshApiToken
 {

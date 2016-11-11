@@ -20,11 +20,11 @@ class BridgeAccessTokenRepositoryTest extends PHPUnit_Framework_TestCase
             $this->assertInstanceOf('DateTime', $array['updated_at']);
             $this->assertEquals($expiration, $array['expires_at']);
         });
-        $accessToken = new Masdevs\Passanger\Bridge\AccessToken(2, [new Masdevs\Passanger\Bridge\Scope('scopes')]);
+        $accessToken = new Masdevs\Passenger\Bridge\AccessToken(2, [new Masdevs\Passenger\Bridge\Scope('scopes')]);
         $accessToken->setIdentifier(1);
         $accessToken->setExpiryDateTime($expiration);
-        $accessToken->setClient(new Masdevs\Passanger\Bridge\Client('client-id', 'name', 'redirect'));
-        $repository = new Masdevs\Passanger\Bridge\AccessTokenRepository($database);
+        $accessToken->setClient(new Masdevs\Passenger\Bridge\Client('client-id', 'name', 'redirect'));
+        $repository = new Masdevs\Passenger\Bridge\AccessTokenRepository($database);
         $repository->persistNewAccessToken($accessToken);
     }
 }

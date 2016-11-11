@@ -1,12 +1,12 @@
 <?php
 
-namespace Masdevs\Passanger\Console;
+namespace Masdevs\Passenger\Console;
 
 use DateTime;
 use Illuminate\Console\Command;
 use Illuminate\Support\Facades\DB;
-use Masdevs\Passanger\ClientRepository;
-use Masdevs\Passanger\PersonalAccessClient;
+use Masdevs\Passenger\ClientRepository;
+use Masdevs\Passenger\PersonalAccessClient;
 
 class ClientCommand extends Command
 {
@@ -30,7 +30,7 @@ class ClientCommand extends Command
     /**
      * Execute the console command.
      *
-     * @param  \Masdevs\Passanger\ClientRepository  $clients
+     * @param  \Masdevs\Passenger\ClientRepository  $clients
      * @return void
      */
     public function handle(ClientRepository $clients)
@@ -49,7 +49,7 @@ class ClientCommand extends Command
     /**
      * Create a new personal access client.
      *
-     * @param  \Masdevs\Passanger\ClientRepository  $clients
+     * @param  \Masdevs\Passenger\ClientRepository  $clients
      * @return void
      */
     protected function createPersonalClient(ClientRepository $clients)
@@ -73,7 +73,7 @@ class ClientCommand extends Command
     /**
      * Create a new password grant client.
      *
-     * @param  \Masdevs\Passanger\ClientRepository  $clients
+     * @param  \Masdevs\Passenger\ClientRepository  $clients
      * @return void
      */
     protected function createPasswordClient(ClientRepository $clients)
@@ -93,7 +93,7 @@ class ClientCommand extends Command
     /**
      * Create a authorization code client.
      *
-     * @param  \Masdevs\Passanger\ClientRepository  $clients
+     * @param  \Masdevs\Passenger\ClientRepository  $clients
      * @return void
      */
     protected function createAuthCodeClient(ClientRepository $clients)

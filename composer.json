@@ -37,7 +37,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Masdevs\\Passanger\\": "src/"
+            "Masdevs\\Passenger\\": "src/"
         }
     },
     "extra": {

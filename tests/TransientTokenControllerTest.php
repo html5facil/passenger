@@ -11,7 +11,7 @@ class TransientTokenControllerTest extends PHPUnit_Framework_TestCase
 
     public function test_token_can_be_refreshed()
     {
-        $cookieFactory = Mockery::mock('Masdevs\Passanger\ApiTokenCookieFactory');
+        $cookieFactory = Mockery::mock('Masdevs\Passenger\ApiTokenCookieFactory');
         $cookieFactory->shouldReceive('make')->once()->with(1, 'token')->andReturn(new Cookie('cookie'));
 
         $request = Mockery::mock(Illuminate\Http\Request::class);
@@ -19,7 +19,7 @@ class TransientTokenControllerTest extends PHPUnit_Framework_TestCase
         $user->shouldReceive('getKey')->andReturn(1);
         $request->shouldReceive('session->token')->andReturn('token');
 
-        $controller = new Masdevs\Passanger\Http\Controllers\TransientTokenController($cookieFactory);
+        $controller = new Masdevs\Passenger\Http\Controllers\TransientTokenController($cookieFactory);
 
         $response = $controller->refresh($request);
 

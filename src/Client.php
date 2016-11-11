@@ -1,6 +1,6 @@
 <?php
 
-namespace Masdevs\Passanger;
+namespace Masdevs\Passenger;
 
 use Alsofronie\Uuid\Uuid32ModelTrait;
 use Illuminate\Database\Eloquent\Model;

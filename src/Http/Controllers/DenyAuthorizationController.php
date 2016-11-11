@@ -1,6 +1,6 @@
 <?php
 
-namespace Masdevs\Passanger\Http\Controllers;
+namespace Masdevs\Passenger\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Contracts\Routing\ResponseFactory;

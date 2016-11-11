@@ -1,6 +1,6 @@
 <?php
 
-namespace Masdevs\Passanger;
+namespace Masdevs\Passenger;
 
 use DateInterval;
 use Carbon\Carbon;

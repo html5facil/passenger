@@ -1,6 +1,6 @@
 <?php
 
-namespace Masdevs\Passanger\Http\Controllers;
+namespace Masdevs\Passenger\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Zend\Diactoros\Response as Psr7Response;

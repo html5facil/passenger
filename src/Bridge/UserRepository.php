@@ -1,6 +1,6 @@
 <?php
 
-namespace Masdevs\Passanger\Bridge;
+namespace Masdevs\Passenger\Bridge;
 
 use RuntimeException;
 use Illuminate\Contracts\Hashing\Hasher;

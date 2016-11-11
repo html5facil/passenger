@@ -1,6 +1,6 @@
 <?php
 
-namespace Masdevs\Passanger;
+namespace Masdevs\Passenger;
 
 use Zend\Diactoros\Response;
 use Zend\Diactoros\ServerRequest;

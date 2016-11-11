@@ -1,6 +1,6 @@
 <?php
 
-namespace Masdevs\Passanger;
+namespace Masdevs\Passenger;
 
 use Carbon\Carbon;
 use Firebase\JWT\JWT;

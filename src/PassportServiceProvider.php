@@ -1,6 +1,6 @@
 <?php
 
-namespace Masdevs\Passport;
+namespace Masdevs\Passenger;
 
 use DateInterval;
 use Illuminate\Auth\RequestGuard;

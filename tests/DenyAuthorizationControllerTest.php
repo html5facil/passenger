@@ -13,7 +13,7 @@ class DenyAuthorizationControllerTest extends PHPUnit_Framework_TestCase
     {
         $response = Mockery::mock(ResponseFactory::class);
 
-        $controller = new Masdevs\Passanger\Http\Controllers\DenyAuthorizationController($response);
+        $controller = new Masdevs\Passenger\Http\Controllers\DenyAuthorizationController($response);
 
         $request = Mockery::mock('Illuminate\Http\Request');
 

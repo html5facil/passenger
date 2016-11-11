@@ -4,7 +4,7 @@ class ScopeTest extends PHPUnit_Framework_TestCase
 {
     public function test_scope_can_be_converted_to_array()
     {
-        $scope = new Masdevs\Passanger\Scope('user', 'get user information');
+        $scope = new Masdevs\Passenger\Scope('user', 'get user information');
         $this->assertEquals([
             'id' => 'user',
             'description' => 'get user information',
@@ -13,7 +13,7 @@ class ScopeTest extends PHPUnit_Framework_TestCase
 
     public function test_scope_can_be_converted_to_json()
     {
-        $scope = new Masdevs\Passanger\Scope('user', 'get user information');
+        $scope = new Masdevs\Passenger\Scope('user', 'get user information');
         $this->assertEquals(json_encode([
             'id' => 'user',
             'description' => 'get user information',
