@@ -73,7 +73,7 @@ class Passport
         };
 
         $options = array_merge($options, [
-            'namespace' => '\Masdevs\Passanger\Http\Controllers',
+            'namespace' => '\Masdevs\Passenger\Http\Controllers',
         ]);
 
         Route::group($options, function ($router) use ($callback) {

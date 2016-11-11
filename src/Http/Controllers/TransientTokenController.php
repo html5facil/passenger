@@ -1,10 +1,10 @@
 <?php
 
-namespace Masdevs\Passanger\Http\Controllers;
+namespace Masdevs\Passenger\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
-use Masdevs\Passanger\ApiTokenCookieFactory;
+use Masdevs\Passenger\ApiTokenCookieFactory;
 
 class TransientTokenController
 {

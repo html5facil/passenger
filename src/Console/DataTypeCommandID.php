@@ -12,7 +12,7 @@ class DataTypeCommandId extends Command
      *
      * @var string
      */
-    protected $signature = 'Passanger:data-type-id';
+    protected $signature = 'passport:data-type-id';
 
     /**
      * The console command description.
