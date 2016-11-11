@@ -11,9 +11,9 @@ use League\OAuth2\Server\ResourceServer;
 use League\OAuth2\Server\AuthorizationServer;
 use League\OAuth2\Server\Grant\AuthCodeGrant;
 use League\OAuth2\Server\Grant\PasswordGrant;
-use Masdevs\Passport\Bridge\PersonalAccessGrant;
+use Masdevs\Passenger\Bridge\PersonalAccessGrant;
 use League\OAuth2\Server\Grant\RefreshTokenGrant;
-use Masdevs\Passport\Bridge\RefreshTokenRepository;
+use Masdevs\Passenger\Bridge\RefreshTokenRepository;
 use League\OAuth2\Server\Grant\ClientCredentialsGrant;
 
 class PassportServiceProvider extends ServiceProvider
